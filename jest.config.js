@@ -2,6 +2,8 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  collectCoverage: true,
+  reporters: ['default', 'jest-junit'],
   globals: {
     // XXX we must specify a custom tsconfig for tests because we need the typescript transform
     //  to transform jsx into js rather than leaving it jsx such as the next build requires.  you

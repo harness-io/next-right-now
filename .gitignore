@@ -114,6 +114,7 @@ coverage/
 
 # testing
 /coverage
+/testResults
 
 # next.js
 /.next/

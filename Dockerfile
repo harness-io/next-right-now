@@ -2,7 +2,8 @@ FROM node:15-buster-slim as build
 
 RUN apt-get update && \
     apt-get install -y \
-      build-essential
+      build-essential \
+      procps
 
 # WORKDIR /src
 
