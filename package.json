@@ -64,7 +64,7 @@
     "lint:fix": "eslint src/ --ext .ts --ext .tsx --fix",
     "lint:fix:preview": "eslint src/ --ext .ts --ext .tsx --fix-dry-run",
     "test": "NODE_ENV=test jest --watch",
-    "test:ci": "NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=testResults jest",
+    "test:ci": "NODE_ENV=test jest",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
     "test:group:api": "NODE_ENV=test jest --group=api --watchAll",
     "test:group:components": "NODE_ENV=test jest --group=components --watchAll",
