@@ -9,6 +9,6 @@ WORKDIR /src
 
 COPY ./package.json /yarn.lock /src/
 
-# RUN yarn install --check-files --frozen-lockfile --network-timeout 100000 --non-interactive
+RUN yarn install --check-files --frozen-lockfile --network-timeout 100000 --non-interactive
 
 COPY ./ /src
