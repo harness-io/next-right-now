@@ -5,14 +5,9 @@ RUN apt-get update && \
       build-essential \
       procps
 
-# WORKDIR /src
+WORKDIR /src
 
-# COPY ./yarn.lock ./package.json /src/
+COPY ./package.json /yarn.lock /src/
 
-# RUN ls -la && yarn install --check-files
-
-# COPY ./ /src
-
-# FROM node:15-buster-slim as app
-
+RUN yarn install --check-files --frozen-lockfile --network-timeout 100000 --non-interactive
 
