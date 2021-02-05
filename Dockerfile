@@ -1,13 +1,17 @@
-FROM node:15-buster-slim
+# Base container for installing build tools
+FROM node:15-buster-slim as build-tools
+
+RUN apt-get update && \
+    apt-get install -y \
+      build-essential \
+      git
+
+# Container that will be used for running the application
+FROM node:15-buster-slim as app
 
 COPY ./ /src
 
-# RUN apt-get update && \
-#     apt-get install -y \
-#       build-essential \
-#       procps
-
-# WORKDIR /src
+WORKDIR /src
 
 # COPY ./package.json /yarn.lock /src/
 
